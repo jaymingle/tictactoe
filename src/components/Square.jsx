@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const Square = () => {
+const Square = ({value}) => {
 
     const [value, setValue] = useState(null)
 

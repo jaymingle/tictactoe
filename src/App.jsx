@@ -1,7 +1,10 @@
 import './App.css'
 import Square from "./components/Square.jsx";
+import {useState} from "react";
 
 function App() {
+
+    const [squares, setSquares] = useState(Array(9).fill(null))
 
   return (
     <>
