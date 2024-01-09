@@ -8,7 +8,7 @@ function App() {
       <div className="app-class">
           <p>Welcome to Ghana</p>
           <div className="board-row">
-              <Square value={1}/>
+              <Square/>
               <Square value={2}/>
               <Square value={3}/>
           </div>
