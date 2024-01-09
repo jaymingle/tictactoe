@@ -11,15 +11,15 @@ function App() {
       <div className="app-class">
           <p>Welcome to Ghana</p>
           <div className="board-row">
-              <Square/>
-              <Square/>
-              <Square/>
+              <Square value={squares[0]}/>
+              <Square value={squares[1]}/>
+              <Square value={squares[2]}/>
           </div>
 
           <div className="board-row">
-              <Square/>
-              <Square/>
-              <Square/>
+              <Square value={squares[0]}/>
+              <Square value={squares[0]}/>
+              <Square value={squares[0]}/>
           </div>
 
           <div className="board-row">
