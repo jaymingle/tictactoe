@@ -1,4 +1,5 @@
 import './App.css'
+import Square from "./components/Square.jsx";
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
       <div className="app-class">
           <p>Welcome to Ghana</p>
           <div className="board-row">
-              <button className="square">X</button>
+              <Square/>
               <button className="square">X</button>
               <button className="square">X</button>
           </div>
