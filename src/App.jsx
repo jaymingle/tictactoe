@@ -5,13 +5,15 @@ import {useState} from "react";
 function App() {
 
     const [squares, setSquares] = useState(Array(9).fill(null))
-
+    const handleClick = () => {
+        alert("Clicked")
+    }
   return (
     <>
       <div className="app-class">
           <p>Welcome to Ghana</p>
           <div className="board-row">
-              <Square value={squares[0]}/>
+              <Square value={squares[0]} onSquareClick={handleClick}/>
               <Square value={squares[1]}/>
               <Square value={squares[2]}/>
           </div>
