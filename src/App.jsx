@@ -11,7 +11,7 @@ function App() {
       <div className="app-class">
           <p>Welcome to Ghana</p>
           <div className="board-row">
-              <Square onClick={() => setSquares("X")} value={squares[0]}/>
+              <Square value={squares[0]}/>
               <Square value={squares[1]}/>
               <Square value={squares[2]}/>
           </div>
