@@ -13,6 +13,7 @@ function App() {
             nextSquares[i] = "O"
         }
         setSquares(nextSquares)
+        setXisNext(!xIsNext)
     }
   return (
     <>
