@@ -9,14 +9,14 @@ function App() {
           <p>Welcome to Ghana</p>
           <div className="board-row">
               <Square/>
-              <button className="square">X</button>
-              <button className="square">X</button>
+              <Square/>
+              <Square/>
           </div>
 
           <div className="board-row">
-              <button className="square">X</button>
-              <button className="square">X</button>
-              <button className="square">X</button>
+              <Square/>
+              <Square/>
+              <Square/>
           </div>
 
           <div className="board-row">
