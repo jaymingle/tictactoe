@@ -1,9 +1,12 @@
 import {useState} from "react";
 
-const Square = ({value}) => {
+const Square = ({}) => {
+
+    const [value, setValue] = useState(null)
 
     const squareClickHandler = () => {
-        console.log('Clicked')
+        // console.log('Clicked')
+        setValue("X")
     }
 
     return (
