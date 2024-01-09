@@ -3,11 +3,13 @@ import Square from "./components/Square.jsx";
 import {useState} from "react";
 
 function App() {
-
+    const [xIsNext, setXisNext] = useState(true)
     const [squares, setSquares] = useState(Array(9).fill(null))
     const handleClick = (i) => {
         const nextSquares = squares.slice()
-        nextSquares[i] = "X"
+        if(xIsNext){
+            nextSquares[i] = "X"
+        }
         setSquares(nextSquares)
     }
   return (
