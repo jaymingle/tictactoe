@@ -8,21 +8,21 @@ function App() {
       <div className="app-class">
           <p>Welcome to Ghana</p>
           <div className="board-row">
-              <Square/>
-              <Square/>
-              <Square/>
+              <Square value={1}/>
+              <Square value={2}/>
+              <Square value={3}/>
           </div>
 
           <div className="board-row">
-              <Square/>
-              <Square/>
-              <Square/>
+              <Square value={1}/>
+              <Square value={1}/>
+              <Square value={1}/>
           </div>
 
           <div className="board-row">
-              <Square/>
-              <Square/>
-              <Square/>
+              <Square value={1}/>
+              <Square value={1}/>
+              <Square value={1}/>
           </div>
 
       </div>
