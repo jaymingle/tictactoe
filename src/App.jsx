@@ -5,11 +5,7 @@ import {useState} from "react";
 function App() {
 
     const [squares, setSquares] = useState(Array(9).fill(null))
-    const handleClick = (i) => {
-        const nextSquares = squares.slice()
-        nextSquares[i] = "X"
-        setSquares(nextSquares)
-    }
+
   return (
     <>
       <div className="app-class">
