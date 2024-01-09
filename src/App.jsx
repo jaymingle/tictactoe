@@ -9,8 +9,8 @@ function App() {
           <p>Welcome to Ghana</p>
           <div className="board-row">
               <Square/>
-              <Square value={2}/>
-              <Square value={3}/>
+              <Square/>
+              <Square/>
           </div>
 
           <div className="board-row">
