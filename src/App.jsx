@@ -6,7 +6,6 @@ function App() {
 
     const [squares, setSquares] = useState(Array(9).fill(null))
     const handleClick = () => {
-        alert("Clicked")
         const nextSquares = squares.slice()
         nextSquares[0] = "X"
         setSquares(nextSquares)
