@@ -27,9 +27,9 @@ function App() {
           </div>
 
           <div className="board-row">
-              <Square value={squares[6]}/>
-              <Square value={squares[7]}/>
-              <Square value={squares[8]}/>
+              <Square value={squares[6]} onSquareClick={() => handleClick(2)}/>
+              <Square value={squares[7]} onSquareClick={() => handleClick(2)}/>
+              <Square value={squares[8]} onSquareClick={() => handleClick(2)}/>
           </div>
 
       </div>
