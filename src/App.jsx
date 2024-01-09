@@ -20,9 +20,9 @@ function App() {
           </div>
 
           <div className="board-row">
-              <Square value={1}/>
-              <Square value={1}/>
-              <Square value={1}/>
+              <Square value={7}/>
+              <Square value={8}/>
+              <Square value={9}/>
           </div>
 
       </div>
