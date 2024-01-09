@@ -14,9 +14,9 @@ function App() {
           </div>
 
           <div className="board-row">
-              <Square value={1}/>
-              <Square value={1}/>
-              <Square value={1}/>
+              <Square value={4}/>
+              <Square value={5}/>
+              <Square value={6}/>
           </div>
 
           <div className="board-row">
