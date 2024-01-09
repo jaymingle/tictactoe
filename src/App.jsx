@@ -9,6 +9,19 @@ function App() {
           <button className="square">X</button>
           <button className="square">X</button>
           <button className="square">X</button>
+
+          <div className="board-row">
+
+          </div>
+
+          <div className="board-row">
+
+          </div>
+
+          <div className="board-row">
+
+          </div>
+
           <button className="square">X</button>
           <button className="square">X</button>
           <button className="square">X</button>
