@@ -1,6 +1,11 @@
 const Square = ({value}) => {
+
+    const squareClickHandler = () => {
+        console.log('Clicked')
+    }
+
     return (
-        <button className="square">{value}</button>
+        <button className="square" onClick={squareClickHandler}>{value}</button>
     )
 }
 
