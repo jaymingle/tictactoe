@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import "./App.css"
 
 function Square({ value, onSquareClick }) {
     return (
@@ -32,7 +31,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
 
     return (
-        <div className="app-class">
+        <>
             <div className="status">{status}</div>
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -49,7 +48,7 @@ function Board({ xIsNext, squares, onPlay }) {
                 <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
                 <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div>
-        </div>
+        </>
     );
 }
 
@@ -63,13 +62,31 @@ export default function Game() {
         setXIsNext(!xIsNext);
     }
 
+    function jumpTo(nextMove) {
+        // TODO
+    }
+
+    const moves = history.map((squares, move) => {
+        let description;
+        if (move > 0) {
+            description = 'Go to move #' + move;
+        } else {
+            description = 'Go to game start';
+        }
+        return (
+            <li>
+                <button onClick={() => jumpTo(move)}>{description}</button>
+            </li>
+        );
+    });
+
     return (
         <div className="game">
             <div className="game-board">
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
             </div>
             <div className="game-info">
-                <ol>{/*TODO*/}</ol>
+                <ol>{moves}</ol>
             </div>
         </div>
     );
