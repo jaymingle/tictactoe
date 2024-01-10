@@ -1,3 +1,4 @@
+import "./App.css"
 import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
@@ -31,7 +32,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
 
     return (
-        <>
+        <div className="app-class">
             <div className="status">{status}</div>
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -48,7 +49,7 @@ function Board({ xIsNext, squares, onPlay }) {
                 <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
                 <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div>
-        </>
+        </div>
     );
 }
 
@@ -56,6 +57,7 @@ export default function Game() {
     const [xIsNext, setXIsNext] = useState(true);
     const [history, setHistory] = useState([Array(9).fill(null)]);
     const currentSquares = history[history.length - 1];
+    const [currentMove, setCurrentMove] = useState(0)
 
     function handlePlay(nextSquares) {
         setHistory([...history, nextSquares]);
@@ -63,7 +65,8 @@ export default function Game() {
     }
 
     function jumpTo(nextMove) {
-        // TODO
+        setCurrentMove(nextMove)
+        setXIsNext()
     }
 
     const moves = history.map((squares, move) => {
@@ -81,7 +84,7 @@ export default function Game() {
     });
 
     return (
-        <div className="game">
+        <div className="game app-class">
             <div className="game-board">
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
             </div>
