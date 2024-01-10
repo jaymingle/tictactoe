@@ -59,8 +59,10 @@ export const Board = () => {
 
 export default function Game() {
     return(
-        <div>
-
+        <div className="game">
+            <div className="game-board">
+                <Board/>
+            </div>
         </div>
     )
 }
