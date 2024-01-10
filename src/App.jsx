@@ -1,6 +1,5 @@
 import './App.css'
-import Square from "./components/Square.jsx";
-import {useState} from "react";
+import Board from "./components/Board.jsx";
 
 function App() {
 
@@ -8,8 +7,7 @@ function App() {
   return (
     <>
       <div className="app-class">
-
-
+          <Board/>
       </div>
     </>
   )
