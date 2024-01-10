@@ -1,7 +1,7 @@
 import {useState} from "react";
 import Square from "./Square.jsx";
 
-const Board = () => {
+export const Board = () => {
 
     const [xIsNext, setXisNext] = useState(true)
     const [squares, setSquares] = useState(Array(9).fill(null))
@@ -56,7 +56,14 @@ const Board = () => {
         </div>
     )
 }
-export default Board;
+
+export default function Game() {
+    return(
+        <div>
+
+        </div>
+    )
+}
 
 
 function calculateWinner(squares) {
