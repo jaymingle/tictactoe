@@ -7,7 +7,7 @@ function App() {
     const [squares, setSquares] = useState(Array(9).fill(null))
     const handleClick = (i) => {
 
-        if(squares[i]){
+        if(squares[i] || calculateWinner()){
             return
         }
 
@@ -20,6 +20,13 @@ function App() {
         }
         setSquares(nextSquares)
         setXisNext(!xIsNext)
+
+        const winner = calculateWinner(squares)
+        let status;
+        if(winner){
+
+        }
+
     }
   return (
     <>
