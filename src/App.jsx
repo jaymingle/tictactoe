@@ -20,20 +20,21 @@ function App() {
         }
         setSquares(nextSquares)
         setXisNext(!xIsNext)
-
-        const winner = calculateWinner(squares)
-        let status;
-        if(winner){
-            status = "Winner: " + winner;
-        }else{
-
-        }
-
     }
+
+    const winner = calculateWinner(squares)
+
+    let status;
+    if(winner){
+        status = "Winner: " + winner;
+    }else{
+        status = "Next Player: " + (xIsNext ? "X" : "O")
+    }
+
   return (
     <>
       <div className="app-class">
-          <p>Welcome to Ghana</p>
+          <p className="status">{status}</p>
           <div className="board-row">
               <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
               <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
