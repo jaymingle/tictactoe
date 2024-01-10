@@ -22,19 +22,11 @@ function App() {
         setXisNext(!xIsNext)
     }
 
-    const winner = calculateWinner(squares)
-
-    let status;
-    if(winner){
-        status = "Winner: " + winner;
-    }else{
-        status = "Next Player: " + (xIsNext ? "X" : "O")
-    }
 
   return (
     <>
       <div className="app-class">
-          <p className="status">{status}</p>
+          {/*<p className="status">{status}</p>*/}
           <div className="board-row">
               <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
               <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
