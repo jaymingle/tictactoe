@@ -3,8 +3,8 @@ import Square from "./Square.jsx";
 
 export const Board = ({xIsNext, squares, onPlay}) => {
 
-    const [xIsNext, setXisNext] = useState(true)
-    const [squares, setSquares] = useState(Array(9).fill(null))
+    // const [xIsNext, setXisNext] = useState(true)
+    // const [squares, setSquares] = useState(Array(9).fill(null))
     const handleClick = (i) => {
 
         if(calculateWinner(squares) || squares[i]){
@@ -18,8 +18,9 @@ export const Board = ({xIsNext, squares, onPlay}) => {
         }else{
             nextSquares[i] = "O"
         }
-        setSquares(nextSquares)
-        setXisNext(!xIsNext)
+        onPlay(nextSquares)
+        // setSquares(nextSquares)
+        // setXisNext(!xIsNext)
     }
 
     const winner = calculateWinner(squares);
