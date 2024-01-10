@@ -12,6 +12,7 @@ function App() {
         }
 
         const nextSquares = squares.slice()
+
         if(xIsNext){
             nextSquares[i] = "X"
         }else{
