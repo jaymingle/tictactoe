@@ -11,7 +11,7 @@ export const Board = ({xIsNext, squares, onPlay}) => {
             return
         }
 
-        const nextSquares = squares.slice()
+        const nextSquares = squares.slice();
 
         if(xIsNext){
             nextSquares[i] = "X"
